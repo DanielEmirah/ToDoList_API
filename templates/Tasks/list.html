@@ -1,0 +1,9 @@
+{% extends 'Tasks/base.html' %}
+
+{% block title %}Liste des tâches à faire{% endblock title %}
+
+{% block contents %}
+{% for task in tasks %}
+<h1>{{ forloop.counter }} | {{ task.titre }}</h1>
+{% endfor %}
+{% endblock contents %}
