@@ -4,8 +4,10 @@
 
 {% block contents %}
 <h1>Liste des tâches :</h1>
+<a href="{% url 'Tasks:CreateTask' %}">Créer</a>
 {% for task in tasks %}
 <p>{{ forloop.counter }} | {{ task.titre }}</p>
+<a href="{% url 'Tasks:UpdateTask' task.id %}">Modifier</a>
 <a href="{% url 'Tasks:DeleteTask' task.id %}">Supprimer</a>
 {% endfor %}
 {% endblock contents %}
