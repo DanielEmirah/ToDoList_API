@@ -3,7 +3,8 @@
 {% block title %}Liste des tâches à faire{% endblock title %}
 
 {% block contents %}
+<h1>Liste des tâches :</h1>
 {% for task in tasks %}
-<h1>{{ forloop.counter }} | {{ task.titre }}</h1>
+<p>{{ forloop.counter }} | {{ task.titre }}</p>
 {% endfor %}
 {% endblock contents %}
