@@ -6,5 +6,6 @@
 <h1>Liste des tâches :</h1>
 {% for task in tasks %}
 <p>{{ forloop.counter }} | {{ task.titre }}</p>
+<a href="{% url 'Tasks:DeleteTask' task.id %}">Supprimer</a>
 {% endfor %}
 {% endblock contents %}

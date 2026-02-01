@@ -12,3 +12,8 @@ def createtask(request):
         task = form.save()
         return redirect("Tasks:TasksList")
     return render(request, "Tasks/formulaire.html", {"form": form})
+
+def deletetask(request, pk):
+    task = Task.objects.get(id=pk)
+    task.delete()
+    return redirect("Tasks:TasksList")
